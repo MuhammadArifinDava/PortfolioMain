@@ -1,0 +1,126 @@
+@import "../../app.scss";
+
+.hero {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff, #64d5ec);
+  position: relative;
+
+  @include mobile {
+    height:100%
+  }
+
+  .wrapper {
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+
+    .scrollButton {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .textContainer {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+
+      @include mobile {
+        height: 40%;
+        width: 92%;
+        gap: 18px;
+        align-items: center;
+        text-align: center;
+        margin-left: 25px;
+      }
+
+      h2 {
+        font-size: 30px;  
+        color: transparent;
+        background: linear-gradient(45deg,#00000091, #00beed,);
+        background-clip: text;
+        letter-spacing: 7px;
+      }
+
+      h1 {
+        font-size: 83px;
+        color: transparent;
+        background: linear-gradient(45deg,#018796, #f6f2057b);
+        background-clip: text;
+
+        @include mobile {
+          font-size: 31px;
+          margin-right: 17px;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        gap: 18px;
+
+        button {
+          z-index: 1;
+          position: relative;
+          padding: 20px;
+          border: 1.5px solid white;
+          border-radius: 10px;
+          background: linear-gradient(45deg,#04e6ff96, #f6f205ad,);
+          color: rgb(0, 0, 0);
+          margin-right: 20px;
+          cursor: pointer;
+          font-weight: 400;
+        
+      @include mobile {
+        justify-content: center;
+      }
+        }
+      }
+
+      img {
+        width: 60px;
+        border: black;
+      }
+    }
+  }
+
+  .imageContainer {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include mobile {
+      height: 65%;
+      width: 100%;
+      top: unset;
+      bottom: 0;
+      size: 0rem;
+      left: 19px;
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: white;
+      border-left: white;
+    }
+  }
+
+  .slidingTextContainer {
+    z-index: 0;
+    position: absolute;
+    font-size: 51vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: #ffffff39;
+    width: 50%;
+    font-weight: bold;
+    pointer-events: none;
+  }
+}
+

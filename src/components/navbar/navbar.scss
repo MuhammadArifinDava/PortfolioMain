@@ -1,0 +1,60 @@
+@import "../../app.scss";
+
+.navbar {
+  height: 100px;
+  background: linear-gradient(180deg,#05d5ff, #ffffff );
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    @include mobile {
+      justify-content: flex-end;
+      padding: 20px;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: x-large;
+      background: linear-gradient(45deg,#000000, #00beed,);
+      text-shadow: #000000;
+      background-clip: text;
+      color: transparent;
+      transition: background 10s ease;
+      animation: typing-animation 2s steps(20, end) infinite;
+      
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .social {
+      display: flex;
+      gap: 8px;
+    
+      .icons {
+        width: 37px;
+        height: 38px;
+        border-radius: 100%;
+        border: 2px solid #000000; 
+        fill: rgb(0, 0, 0);
+        margin-right: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px;
+
+    
+        &:hover {
+          background-color: rgb(47, 182, 255);
+          border-color: rgb(25, 215, 249);
+          fill: white; /* Ubah warna SVG saat dihover */
+        }
+      }
+    }    
+  } 
+}
