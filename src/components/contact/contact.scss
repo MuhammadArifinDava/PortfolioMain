@@ -57,11 +57,11 @@
       position: absolute;
       margin: auto;
       z-index: -1;
-      transform: scale(1.15) translate(15%, -5%);
+      transform: scale(1.15) translate(50%, -5%);
 
       @include mobile {
         bottom: 20px;
-        transform: scale(0.7) translate(-25%, -15%);
+        transform: scale(0.7) translate(-20%, -30%);
       }
     }
 
@@ -69,10 +69,9 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-
       input,
       textarea {
-        padding: 20px;
+        padding: 15px;
         background-color: transparent;
         border: 1px solid black;
         color: black  ;
@@ -80,7 +79,7 @@
         text-decoration: none;
 
         @include mobile {
-          padding: 10px;
+          gap: 10px;
         }
       }
 
@@ -90,6 +89,7 @@
         background-color: orange;
         cursor: pointer;
         font-weight: 500;
+
         @include mobile {
           padding: 10px;
           border-radius: 20px;
