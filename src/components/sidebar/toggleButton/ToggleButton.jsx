@@ -1,10 +1,17 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
-const ToggleButton = ({ setOpen }) => {
+const ToggleButton = ({ setOpen, open }) => {
+  useEffect(() => {
+    console.log("Initial state:", open);
+  }, [open]);
+
   return (
     <button onClick={() => setOpen((prev) => !prev)}>
       <svg width="23" height="23" viewBox="0 0 23 23">
         <motion.path
+          initial={open ? "open" : "closed"}
+          animate={open ? "open" : "closed"}
           strokeWidth="3"
           stroke="black"
           strokeLinecap="round"
@@ -14,6 +21,8 @@ const ToggleButton = ({ setOpen }) => {
           }}
         />
         <motion.path
+          initial={open ? "open" : "closed"}
+          animate={open ? "open" : "closed"}
           strokeWidth="3"
           stroke="black"
           strokeLinecap="round"
@@ -24,6 +33,8 @@ const ToggleButton = ({ setOpen }) => {
           }}
         />
         <motion.path
+          initial={open ? "open" : "closed"}
+          animate={open ? "open" : "closed"}
           strokeWidth="3"
           stroke="black"
           strokeLinecap="round"
