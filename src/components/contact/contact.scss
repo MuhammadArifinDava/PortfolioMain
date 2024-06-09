@@ -45,7 +45,16 @@
   .formContainer {
     flex: 1;
     position: relative;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 370px) {
+      transform: scale(0.8) translate(0%, -15%);
+      gap: 20px;
+      padding: 15px;
+    }
+
     @include mobile {
       padding: 42px;
       width: 100%;
@@ -57,11 +66,11 @@
       position: absolute;
       margin: auto;
       z-index: -1;
-      transform: scale(1.15) translate(50%, -5%);
+      transform: scale(1.05) translate(40px, -5%);
 
       @include mobile {
         bottom: 20px;
-        transform: scale(0.7) translate(-20%, -30%);
+        transform: scale(0.7) translate(0%, -25%);
       }
     }
 
@@ -69,6 +78,7 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      width: 80%;
       input,
       textarea {
         padding: 15px;
@@ -80,6 +90,7 @@
 
         @include mobile {
           gap: 10px;
+          padding: 10px;
         }
       }
 
@@ -93,6 +104,7 @@
         @include mobile {
           padding: 10px;
           border-radius: 20px;
+          transform: translate(0%, -25%);
         }
       }
     }
