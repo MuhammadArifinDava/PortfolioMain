@@ -3,35 +3,21 @@
 .navbar {
   height: 100px;
   background: linear-gradient(180deg, #05d5ff, #ffffff);
-
-  .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .navbar-brand-link {
-    text-decoration: none;
-
-    &:hover .navbar-brand {
-      background: linear-gradient(45deg, #00beed, #000000);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-  }
+  position: fixed; /* Menambahkan properti ini */
+  top: 0; /* Menambahkan properti ini */
+  width: 100%; /* Menambahkan properti ini */
+  z-index: 1000; /* Menambahkan properti ini untuk memastikan navbar berada di atas elemen lain */
 
   .navbar-brand {
     font-weight: bold;
     font-size: x-large;
     background: linear-gradient(45deg, #000000, #00beed);
     text-shadow: #000000;
-    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     transition: background 10s ease;
     animation: typing-animation 2s steps(20, end) infinite;
+    margin-left: 200px;
 
     @include mobile {
       display: none;
@@ -41,6 +27,7 @@
   .social {
     display: flex;
     gap: 8px;
+    margin-right: 185px;
 
     .icons {
       width: 37px;

@@ -1,6 +1,5 @@
 @import "../../app.scss";
 
-
 .contact {
   height: 100%;
   max-width: 1366px;
@@ -60,9 +59,9 @@
       width: 100%;
     }
 
-
     .phoneSvg {
       stroke: rgba(255, 179, 0, 0.717);
+      stroke-width: 2; // Ubah stroke-width menjadi lebih tebal
       position: absolute;
       margin: auto;
       z-index: -1;
@@ -84,7 +83,7 @@
         padding: 15px;
         background-color: transparent;
         border: 1px solid black;
-        color: black  ;
+        color: black;
         border-radius: 5px;
         text-decoration: none;
 

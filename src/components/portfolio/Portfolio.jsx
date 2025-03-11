@@ -6,32 +6,37 @@ const items = [
   {
     id: 1,
     title: "CoffeeShop Web",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "This is the example of Coffee Shop Web with simple system to order some Coffee and the Coffee Shop system with responsive and interesting interface to make buyers get interested.",
+    img: "/11.png", 
+    desc: "This is my Main Portfolio Website to show all of my works, my skills, and my contact to get in touch with me from email or social media.",
+    url: "https://davaportfolio.netlify.app/",
   },
   {
     id: 2,
-    title: "Wedding Invitation Web",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "One of my Wedding Invitation Website with a unique design and feature, cause in this digital era, we can use a alternative invitation with website so make you can reach all of yours invitee wherever",
+    title: "Santap Rambutan Web",
+    img: "/22.png", 
+    desc: "This Web is a simple website that i was created for my own business, a small business that sell Rambutan fruit with online order system.",
+    url: "https://santaprambutan.netlify.app/",
   },
   {
     id: 3,
     title: "PortFolio Web",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "/33.png", 
     desc: "This is my first ever website that i was created, just a simple website about mine or yourself.",
+    url: "https://chipseyy.netlify.app/",
   },
   {
     id: 4,
-    title: "Editing Video",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: " A pieces of my editing video skill, not great but at least good that will make your video better to watch. ",
+    title: "Portfolio Web",
+    img: "/44.png", 
+    desc: " This is my Main Portfolio Website to show all of my works, my skills, and my contact to get in touch with me from email or social media ",
+    url: "https://chipsey.netlify.app/",
   },
   {
     id: 5,
-    title: "Data Programming",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: " A Coffee Shop Program with Python Languange that accomodate all of CoffeeShop system. Like buying with e-wallet, vouchers and discount, vip members account, stock and price developing, and the payment is programed  ",
+    title: "Data Mining",
+    img: "/55.png", 
+    desc: " A Data Mining Program with Python Languange that use to analyst data from any data source, and visualize it to be a report.",
+    url: "https://davaportfolio.netlify.app/",
   },
 ];
 
@@ -56,7 +61,7 @@ const Single = ({ item }) => {
             <p className={item.id === 1 || item.id === 2 ? "white-text" : ""}>
               {item.desc}
             </p>
-            <button>See Demo</button>
+            <button onClick={() => window.open(item.url, "_blank")}>See Demo</button>
           </motion.div>
         </div>
       </div>

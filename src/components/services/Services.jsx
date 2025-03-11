@@ -84,7 +84,7 @@ const Services = () => {
               isMobile
                 ? {}
                 : {
-                    background: "linear-gradient(360deg, #ffffff, #04508f)",
+                    background: "linear-gradient(360deg, #ffffff,rgb(109, 229, 250))",
                     color: "#61b6eb",
                     scale: 0.95,
                   }

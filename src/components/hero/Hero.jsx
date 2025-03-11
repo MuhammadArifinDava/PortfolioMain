@@ -77,7 +77,7 @@ const Hero = () => {
         >
           <motion.h2 variants={textVariants}>Hello Everyone 👋</motion.h2>
           <motion.h1 variants={textVariants}>
-            Dava, Junior FrontEnd WebDev
+          Dava, Junior FrontEnd WebDev
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button
