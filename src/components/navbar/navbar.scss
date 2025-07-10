@@ -19,7 +19,7 @@
 
     span {
       font-weight: bold;  
-      font-size: x-large;
+      font-size: xx-large;
       background: linear-gradient(45deg,#000000, #00beed,);
       text-shadow: #000000;
       background-clip: text;
@@ -37,8 +37,8 @@
       gap: 8px;
     
       .icons {
-        width: 37px;
-        height: 38px;
+        width: 42px;
+        height: 42px;
         border-radius: 100%;
         border: 2px solid #000000; 
         fill: rgb(0, 0, 0);
@@ -46,13 +46,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 6px;
+        padding: 5px;
 
     
         &:hover {
           background-color: rgb(47, 182, 255);
           border-color: rgb(25, 215, 249);
-          fill: white; /* Ubah warna SVG saat dihover */
+          fill: white;
         }
       }
     }    

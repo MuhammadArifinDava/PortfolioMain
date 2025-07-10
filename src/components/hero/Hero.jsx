@@ -14,7 +14,10 @@ const scrollToId = (id) => {
 
 const Hero = () => {
   const handleSeeLatestWorksClick = () => {
-    scrollToId("Portfolio");
+    window.open(
+      "https://drive.google.com/file/d/1v1dVNDteE9rIRk0PmnLzNy0mPzJ0-OGg/view?usp=sharing",
+      "_blank"
+    );
   };
 
   const handleContactMeClick = () => {
@@ -77,14 +80,14 @@ const Hero = () => {
         >
           <motion.h2 variants={textVariants}>Hello Everyone 👋</motion.h2>
           <motion.h1 variants={textVariants}>
-            Dava, Junior FrontEnd WebDev
+          Dava, FullStack Developer
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button
               variants={textVariants}
               onClick={handleSeeLatestWorksClick}
             >
-              See the Latest Works
+              See my CV
             </motion.button>
             <motion.button
               variants={textVariants}
@@ -108,10 +111,10 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        FrontEnd BackEnd Editor
+        FullStack | Mobile | Machine Learning 
       </motion.div>
       <div className="imageContainer">
-        <img src="/hero2.png" alt="" />
+        <img src="/hero.png" alt="" />
       </div>
     </div>
   );

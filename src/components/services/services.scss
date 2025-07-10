@@ -2,11 +2,105 @@
 
 .services {
   background: linear-gradient(360deg, #ffffff, #04507f);
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-bottom: 90px;
 
+  .top-container {
+    padding-top: 50px; 
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .skillset-title-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .skillset-title {
+    font-size: clamp(2.5rem, 8vw, 6rem); 
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(5, 198, 241, 0.5);
+  }
+
+  .logo-slider-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-slider {
+    width: 85%;
+    padding: 15px 0;
+    background-color: #1673a4;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 150px;
+      height: 100%;
+      z-index: 2;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to left, rgba(5, 88, 139, 0), #044a74);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to right, rgba(4, 74, 116, 0), #044a74);
+    }
+    
+    &:hover .logo-track {
+      animation-play-state: paused;
+    }
+  }
+  
+  .logo-track {
+    display: flex;
+    width: calc(200px * 34); 
+    animation: scroll 30s linear infinite;
+  }
+
+  .slide {
+    width: 200px; 
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    box-sizing: border-box;
+
+    img {
+      max-width: 70%;
+      max-height: 50px;
+      filter: grayscale(1) brightness(1.5); 
+      transition: 0.3s;
+      
+      &.invert-on-dark {
+        filter: brightness(0) invert(1);
+      }
+      
+      &:hover {
+        filter: none; 
+        transform: scale(1.1);
+      }
+    }
+  }
+  
   .textContainer {
     flex: 1;
     align-self: flex-end;
@@ -26,7 +120,6 @@
       font-weight: 200;
       font-size: 20px;
       color: rgb(255, 255, 255);
-      text-align: right;
 
       @include mobile {
         font-size: 17px;
@@ -113,7 +206,7 @@
     display: flex;
     max-width: 1366px;
     margin: auto;
-    grid-template-columns: 1fr 1fr;
+    text-align: justify;
 
     @include mobile {
       flex-direction: column;
@@ -121,7 +214,7 @@
     }
 
     .box {
-      padding: 50px;
+      padding: 45px;
       border: 0.5px solid gray;
       display: flex;
       flex-direction: column;
@@ -161,7 +254,7 @@
           padding: 5px;
         }
       }
-
+      
       @media (max-width: 768px) {
         &:hover {
           background: none; 
@@ -170,5 +263,14 @@
         }
       }
     }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 17));
   }
 }

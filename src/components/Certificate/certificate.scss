@@ -1,0 +1,80 @@
+@import "../../app.scss";
+
+.Certificate {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+   background: linear-gradient(359deg,#64d5ec12, #ffffff);
+
+  h2 {
+    color: primary;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 0.9;
+    padding-top: 7vh;
+    margin-bottom: 5vh;
+  }
+
+  .group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .item {
+    width: 8vw; 
+    height: 65vh;
+    position: relative;
+    background-image: var(--url);
+    background-position: center;
+    background-size: 75vh;
+    margin: 0.5vw; 
+    border-radius: 2.5vw; 
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+
+    .overlay {
+      background: rgba(32, 214, 255, 0.089);
+      border-radius: inherit;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .menu {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 100%;
+      padding-top: 20vh;
+      padding-bottom: 10vh;
+      border-radius: 0 0 inherit inherit;
+      transform: translateX(-50%);
+      background: linear-gradient(to top, rgba(8, 209, 244, 0.7) 30%, rgba(0, 0, 0, 0));
+      opacity: 0;
+      pointer-events: none;
+
+      label {
+        color: #000000;
+        display: block;
+        font-size: 20px;
+        overflow-x: hidden;
+        text-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
+        padding: 0 2rem; 
+      }
+    }
+  }
+}

@@ -5,33 +5,51 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "CoffeeShop Web",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "This is the example of Coffee Shop Web with simple system to order some Coffee and the Coffee Shop system with responsive and interesting interface to make buyers get interested.",
+    title: "Company Profile Website",
+    img: "/portfolio1.jpg",
+    desc: "This project is a comprehensive, public-facing company profile website designed to establish a strong and professional digital presence. It strategically presents essential business information, including a detailed company profile, product offerings, key competitive advantages, and contact details.",
   },
   {
     id: 2,
-    title: "Wedding Invitation Web",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "One of my Wedding Invitation Website with a unique design and feature, cause in this digital era, we can use a alternative invitation with website so make you can reach all of yours invitee wherever",
+    title: "Internal Company Website",
+    img: "/portfolio2.jpg",
+    desc: "This project's internal website is designed for strategic decision-making, and my primary responsibility was developing the frontend. I built its dynamic dashboard, featuring interactive, filterable charts used to analyze sales performance, product trends, and company-client purchasing histories.",
   },
   {
     id: 3,
-    title: "PortFolio Web",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "This is my first ever website that i was created, just a simple website about mine or yourself.",
+    title: "Museum Website",
+    img: "/portfolio3.jpg",
+    desc: "This website serves as the digital gateway to the Mulawarman Museum, offering a comprehensive look into the rich cultural heritage of East Kalimantan. Visitors can delve into the region's past by exploring the fascinating history of the Kertanegara Kingdom and Browse diverse collections of historical artifacts and cultural arts.",
   },
   {
     id: 4,
-    title: "Editing Video",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: " A pieces of my editing video skill, not great but at least good that will make your video better to watch. ",
+    title: "Coffee Shop Website",
+    img: "/portfolio4.jpg",
+    desc: "This project is a visually-driven website for 'Kemarin Coffee,' designed to establish a strong online brand identity. It provides customers with essential information through key sections like an engaging 'Our Story' and an attractive product menu. To streamline the ordering process, customers are seamlessly directed to the admin's WhatsApp for direct communication and purchase. The website's clean, minimalist aesthetic and high-quality imagery create a sophisticated and welcoming digital atmosphere.",
   },
   {
     id: 5,
-    title: "Data Programming",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: " A Coffee Shop Program with Python Languange that accomodate all of CoffeeShop system. Like buying with e-wallet, vouchers and discount, vip members account, stock and price developing, and the payment is programed  ",
+    title: "UMKM Santap Rambutan Website",
+    img: "/portfolio5.jpg",
+    desc: "This project is an website developed for 'Santap Rambutan,' a brand specializing in innovative rambutan-based dessert products. The website serves as the primary digital storefront, showcasing a variety of unique desserts, providing detailed brand information, and outlining product advantages. Notably, this project and its underlying business concept were developed and submitted as part of the PKM (Student Creativity Program) for the national Simbelmawa competition, highlighting its strong foundation in digital entrepreneurship.",
+  },
+  {
+    id: 6,
+    title: "Mobile Apps",
+    img: "/portfolio6.jpg",
+    desc: "This project is an Instagram-inspired social media app providing full CRUD (Create, Read, Update, Delete) functionality for posts. Its core social features include a friend system with user search, follow capabilities, and profile viewing. The app was built on a modern stack, using Flutter for the cross-platform UI, Supabase as its Backend-as-a-Service (BaaS), and FlutterFlow to accelerate visual development.",
+  },
+  {
+    id: 7,
+    title: "Mobile App",
+    img: "/portfolio7.jpg",
+    desc: "This project is an Instagram-inspired social media app providing full CRUD (Create, Read, Update, Delete) functionality for posts. Its core social features include a friend system with user search, follow capabilities, and profile viewing. The app was built on a modern stack, using Flutter for the cross-platform UI, Supabase as its Backend-as-a-Service (BaaS), and FlutterFlow to accelerate visual development.",
+  },
+  {
+    id: 8,
+    title: "Samarinda News App ",
+    img: "/portfolio8.jpg",
+    desc: "Stay connected to the pulse of Samarinda. We deliver the news that matters to you, from major political and economic updates to hyperlocal stories about your community. Covering everything from health and technology to local events and policies, our app is your essential source for understanding what's happening in Samarinda, East Kalimantan.",
   },
 ];
 
@@ -52,8 +70,8 @@ const Single = ({ item }) => {
             <img src={item.img} alt="" />
           </div>
           <motion.div className="textContainer" style={{ y }}>
-            <h2 className={item.id === 1 || item.id === 2 ? "white-text" : ""}>{item.title}</h2>
-            <p className={item.id === 1 || item.id === 2 ? "white-text" : ""}>
+            <h2 className={item.id <= 3 ? "white-text" : "blue-text"}>{item.title}</h2>
+            <p className={item.id <= 3 ? "white-text" : "black-text"}>
               {item.desc}
             </p>
             <button>See Demo</button>
